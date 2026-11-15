@@ -243,25 +243,25 @@ The model is trained using dataset-specific loss functions and class weighting t
 
 ---
 
-## **Results**
+## Results
 
-The proposed framework achieves the following classification performance.
+The proposed framework was developed progressively by integrating attention mechanisms and multiscale feature extraction components into the DenseNet121 backbone. The performance of each configuration was evaluated on both BUS-BRA (binary classification) and BUS-UCLM (three-class classification) datasets.
 
-### **1. BUS-BRA: Binary Classification**
+### Progressive Development and Comparative Results
 
-| Metric | Performance |
-|---|---:|
-| Accuracy | 0.9126 |
-| F1-Score | 0.9122 |
+| Configuration | Parameters | BUS-BRA Acc. | BUS-BRA F1 | BUS-UCLM Acc. | BUS-UCLM F1 |
+|---|---:|---:|---:|---:|---:|
+| DenseNet121 | 7.6M | 0.8699 | 0.8683 | 0.8696 | 0.8707 |
+| DenseNet + SE Attention | 7.7M | 0.8785 | 0.8798 | 0.8986 | 0.8991 |
+| DenseNet + CBAM Attention | 7.7M | 0.8742 | 0.8741 | 0.8986 | 0.8991 |
+| DenseNet + Dual-Attention | 8.0M | 0.8785 | 0.8793 | 0.8841 | 0.8840 |
+| DenseNet + Adaptive Dual Fusion | 8.9M | 0.8849 | 0.8858 | 0.8841 | 0.8879 |
+| DenseNet + FPN | 10.5M | 0.8891 | 0.8885 | 0.8696 | 0.8744 |
+| **Proposed Architecture** | **10.5M** | **0.9040** | **0.9122** | **0.9130** | **0.9130** |
 
-### **2. BUS-UCLM: Three-Class Classification**
+The results illustrate the progressive development of the proposed framework across both datasets. The final architecture achieves an accuracy of **0.9040** and an F1-score of **0.9122** on BUS-BRA, while achieving an accuracy and F1-score of **0.9130** on BUS-UCLM, with a parameter count of **10.5M**.
 
-| Metric | Performance |
-|---|---:|
-| Accuracy | 0.9130 |
-| F1-Score | 0.9130 |
-
-The reported results demonstrate the performance of the proposed model under the evaluated experimental configurations.
+Overall, the progressive experiments demonstrate how the integration of feature pyramid learning and hybrid attention contributes to the development of the final architecture, while maintaining a relatively compact model size.
 
 ---
 
