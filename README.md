@@ -237,7 +237,7 @@ The proposed framework is implemented using PyTorch.
 | Early Stopping | Patience = 20 |
 | Learning Rate Scheduler | ReduceLROnPlateau |
 | Hardware | NVIDIA Tesla P100 GPU |
-| Random Seeds | 42, 123, 999 |
+| Random Seeds | 12, 42, 99, 1111, and 1234 |
 
 The model is trained using dataset-specific loss functions and class weighting to address class imbalance.
 
