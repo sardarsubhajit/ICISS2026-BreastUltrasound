@@ -1,15 +1,3 @@
-# ICISS2026-BreastUltrasound
-Official code repository for our ICISS 2026 research on breast ultrasound image classification using DenseNet121, Feature Pyramid Network (FPN), and Adaptive SE-CBAM Hybrid Attention. Includes model implementation, experimental configurations, and evaluation code.
-
-**Title:** Dual-Attention and Feature Pyramid Network-Enhanced Model for Ultrasound Breast Cancer Classification
-
-**Author:** Britika Khati*, Subhajit Sardar*, Ram Sarkar
-*(\* equal contribution)*
-
-**Affiliation:** Department of Computer Science and Engineering, Jadavpur University, India
-
----
-
 ## **Prerequisites**
 
 To run this code successfully, the following software and libraries are required. The implementation is developed using Python and PyTorch.
