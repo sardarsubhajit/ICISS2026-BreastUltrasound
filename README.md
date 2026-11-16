@@ -109,15 +109,15 @@ The proposed framework was developed progressively by integrating attention mech
 
 ### Progressive Development and Comparative Results
 
-| Configuration | Parameters | BUS-BRA Acc. (%) | BUS-BRA F1 (%) | BUS-UCLM Acc. (%) | BUS-UCLM F1 (%) |
-|---|---:|---:|---:|---:|---:|
-| DenseNet121 | 7.6M | 86.99 ± 1.84 | 86.83 ± 1.87 | 86.96 ± 2.13 | 87.07 ± 2.05 |
-| DenseNet with SE Attention | 7.7M | 87.85 ± 1.75 | 87.98 ± 1.72 | 89.86 ± 1.85 | 89.91 ± 1.89 |
-| DenseNet with CBAM Attention | 7.7M | 87.42 ± 1.82 | 87.41 ± 1.93 | 89.86 ± 1.97 | 89.91 ± 2.12 |
-| DenseNet with Dual-Attention | 8.0M | 87.85 ± 1.98 | 87.93 ± 2.05 | 88.41 ± 1.64 | 88.40 ± 1.65 |
-| DenseNet with Adaptive Dual Fusion | 8.9M | 88.49 ± 1.72 | 88.58 ± 1.94 | 88.41 ± 1.48 | 88.79 ± 1.59 |
-| DenseNet with FPN | 10.5M | 88.91 ± 1.68 | 88.85 ± 1.65 | 86.96 ± 1.62 | 87.44 ± 1.76 |
-| **Proposed Architecture** | **10.5M** | **90.40 ± 1.95** | **91.22 ± 1.98** | **91.30 ± 1.23** | **91.30 ± 1.28** |
+| Configuration | BUS-BRA Accuracy (%) | BUS-BRA F1-score (%) | BUS-UCLM Accuracy (%) | BUS-UCLM F1-score (%) |
+|---|---:|---:|---:|---:|
+| DenseNet121 | 86.99 ± 1.84 | 86.83 ± 1.87 | 86.96 ± 2.13 | 87.07 ± 2.05 |
+| DenseNet with SE Attention | 87.85 ± 1.75 | 87.98 ± 1.72 | 89.86 ± 1.85 | 89.91 ± 1.89 |
+| DenseNet with CBAM Attention | 87.42 ± 1.82 | 87.41 ± 1.93 | 89.86 ± 1.97 | 89.91 ± 2.12 |
+| DenseNet with Dual-Attention | 87.85 ± 1.98 | 87.93 ± 2.05 | 88.41 ± 1.64 | 88.40 ± 1.65 |
+| DenseNet with Adaptive Dual Fusion | 88.49 ± 1.72 | 88.58 ± 1.94 | 88.41 ± 1.48 | 88.79 ± 1.59 |
+| DenseNet with FPN | 88.91 ± 1.68 | 88.85 ± 1.65 | 86.96 ± 1.62 | 87.44 ± 1.76 |
+| **Proposed Architecture** | **90.40 ± 1.95** | **91.22 ± 1.98** | **91.30 ± 1.23** | **91.30 ± 1.28** |
 
 ---
 
