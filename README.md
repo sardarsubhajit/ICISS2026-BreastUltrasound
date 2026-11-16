@@ -33,25 +33,11 @@ Install the required dependencies using:
 pip install torch torchvision numpy matplotlib scikit-learn pandas tqdm
 ```
 
-**Task:** Breast ultrasound image classification
-
-**Key Idea:** Hierarchical feature extraction, multiscale feature fusion, and adaptive hybrid attention for breast ultrasound classification.
-
 ---
-
-## **Overview**
-
-Breast ultrasound imaging is widely used for examining breast abnormalities. However, automated classification of ultrasound images remains challenging due to variations in lesion appearance, image quality, tissue characteristics, and subtle morphological patterns.
-
-Deep learning approaches have demonstrated considerable potential for automated medical image classification. Nevertheless, effectively combining hierarchical representations, multiscale information, and attention-based feature refinement remains an important research challenge.
-
-This work proposes a deep learning framework that integrates a pretrained DenseNet121 backbone, a Feature Pyramid Network (FPN), and an Dual-Adaptive Attention mechanism for breast ultrasound image classification.
-
-The proposed framework aims to capture complementary information from different feature levels while emphasizing discriminative channel and spatial representations.
 
 ## **Architecture**
 
-The proposed DenseFPN-AHAF architecture consists of the following major components:
+The proposed architecture consists of the following major components:
 
 1. DenseNet121 backbone
 2. Hierarchical feature extraction
@@ -83,10 +69,6 @@ The proposed framework processes breast ultrasound images through the following 
 
 ## **Experimental Setup**
 
-The proposed framework is implemented using PyTorch.
-
-### **Training Configuration**
-
 | Parameter | Configuration |
 |---|---|
 | Backbone | DenseNet121 |
@@ -99,15 +81,9 @@ The proposed framework is implemented using PyTorch.
 | Hardware | NVIDIA Tesla P100 GPU |
 | Random Seeds | 12, 42, 99, 1111, and 1234 |
 
-The model is trained using dataset-specific loss functions and class weighting to address class imbalance.
-
 ---
 
 ## Results
-
-The proposed framework was developed progressively by integrating attention mechanisms and multiscale feature extraction components into the DenseNet121 backbone. The performance of each configuration was evaluated on both datasets.
-
-### Progressive Development and Comparative Results
 
 | Configuration | BUS-BRA Accuracy (%) | BUS-BRA F1-score (%) | BUS-UCLM Accuracy (%) | BUS-UCLM F1-score (%) |
 |---|---:|---:|---:|---:|
