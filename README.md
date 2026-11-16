@@ -49,66 +49,6 @@ This work proposes a deep learning framework that integrates a pretrained DenseN
 
 The proposed framework aims to capture complementary information from different feature levels while emphasizing discriminative channel and spatial representations.
 
----
-
-## **What This Work Proposes**
-
-We introduce a feature pyramid-guided dual-attention framework that:
-
-- Combines **DenseNet121** for hierarchical feature extraction.
-- Integrates multilevel features through a **Feature Pyramid Network (FPN)**.
-- Incorporates **Squeeze-and-Excitation (SE)** and **Convolutional Block Attention Module (CBAM)**.
-- Introduces **Dual-Adaptive Attention** for learnable attention integration.
-- Employs multilevel feature aggregation for final classification.
-- Evaluates performance on binary and multiclass breast ultrasound classification tasks.
-
----
-
-## **Key Contributions**
-
-### **DenseNet121-Based Hierarchical Feature Extraction**
-
-DenseNet121 is employed as the backbone network to extract hierarchical feature representations from breast ultrasound images.
-
-Its dense connectivity facilitates feature reuse and supports the extraction of complementary representations across multiple network stages.
-
-### **Multiscale Feature Fusion through Feature Pyramid Network**
-
-The proposed framework integrates a Feature Pyramid Network to combine features from different hierarchical levels.
-
-The FPN enables:
-
-- Top-down semantic information propagation.
-- Multilevel feature integration.
-- Preservation of fine-grained spatial information.
-- Improved representation of ultrasound lesions at different scales.
-
-### **Dual-Attention Feature Refinement**
-
-The framework incorporates two complementary attention mechanisms:
-
-- **Squeeze-and-Excitation (SE):** Emphasizes informative channel responses.
-- **Convolutional Block Attention Module (CBAM):** Refines feature representations through channel and spatial attention.
-
-These mechanisms help the network focus on discriminative information within the extracted feature maps.
-
-### **Dual-Adaptive Attention**
-
-The proposed AHAF mechanism combines the outputs of SE and CBAM through learnable fusion weights.
-
-This enables adaptive integration of complementary attention representations rather than relying exclusively on a single attention mechanism.
-
-### **Evaluation on Two Breast Ultrasound Datasets**
-
-The proposed framework is evaluated on:
-
-- BUS-BRA for binary classification.
-- BUS-UCLM for three-class classification.
-
-The experiments investigate the effectiveness of the proposed framework across different classification settings.
-
----
-
 ## **Architecture**
 
 The proposed DenseFPN-AHAF architecture consists of the following major components:
@@ -141,74 +81,6 @@ The proposed framework processes breast ultrasound images through the following 
 
 ---
 
-## **Datasets Used**
-
-The proposed framework is evaluated on two breast ultrasound image datasets.
-
-### **1. BUS-BRA**
-
-BUS-BRA is utilized for binary breast ultrasound image classification.
-
-**Classification Classes:**
-
-- Benign
-- Malignant
-
-**Classification Task:** Binary classification.
-
-**Dataset Distribution:**
-
-| Class | Number of Images |
-|---|---:|
-| Benign | 1,268 |
-| Malignant | 607 |
-| **Total** | **1,875** |
-
-**Dataset Split:**
-
-| Subset | Benign | Malignant | Total |
-|---|---:|---:|---:|
-| Training | 756 | 368 | 1,124 |
-| Validation | 195 | 87 | 282 |
-| Testing | 317 | 152 | 469 |
-
-The dataset is divided into training, validation, and testing subsets using stratified sampling.
-
-### **2. BUS-UCLM**
-
-BUS-UCLM is utilized for three-class breast ultrasound image classification.
-
-**Classification Classes:**
-
-- Normal
-- Benign
-- Malignant
-
-**Classification Task:** Three-class classification.
-
-**Dataset Distribution:**
-
-| Class | Number of Images |
-|---|---:|
-| Normal | 419 |
-| Benign | 174 |
-| Malignant | 90 |
-| **Total** | **683** |
-
-**Dataset Split:**
-
-| Subset | Normal | Benign | Malignant | Total |
-|---|---:|---:|---:|---:|
-| Training | 335 | 139 | 72 | 546 |
-| Validation | 41 | 17 | 10 | 68 |
-| Testing | 43 | 18 | 8 | 69 |
-
-The dataset is divided at **image level** into training, validation, and testing subsets using stratified sampling.
-
-**Note:** The datasets are not included in this repository. Users must obtain the datasets from their respective sources and configure the notebook accordingly.
-
----
-
 ## **Experimental Setup**
 
 The proposed framework is implemented using PyTorch.
@@ -233,7 +105,7 @@ The model is trained using dataset-specific loss functions and class weighting t
 
 ## Results
 
-The proposed framework was developed progressively by integrating attention mechanisms and multiscale feature extraction components into the DenseNet121 backbone. The performance of each configuration was evaluated on both BUS-BRA (binary classification) and BUS-UCLM (three-class classification) datasets.
+The proposed framework was developed progressively by integrating attention mechanisms and multiscale feature extraction components into the DenseNet121 backbone. The performance of each configuration was evaluated on both datasets.
 
 ### Progressive Development and Comparative Results
 
@@ -250,77 +122,6 @@ The proposed framework was developed progressively by integrating attention mech
 The results illustrate the progressive development of the proposed framework across both datasets. The final architecture achieves an accuracy of **0.9040** and an F1-score of **0.9122** on BUS-BRA, while achieving an accuracy and F1-score of **0.9130** on BUS-UCLM, with a parameter count of **10.5M**.
 
 Overall, the progressive experiments demonstrate how the integration of feature pyramid learning and hybrid attention contributes to the development of the final architecture, while maintaining a relatively compact model size.
-
----
-
-## **Repository Contents**
-
-This repository contains the final model implementations for both breast ultrasound datasets.
-
-| File | Description |
-|---|---|
-| `BUS-BRA_FinalModel.ipynb` | Final implementation for binary breast ultrasound classification |
-| `BUS-UCLM_FinalModel.ipynb` | Final implementation for three-class breast ultrasound classification |
-
-### **Repository Structure**
-
-```text
-ICISS2026-BreastUltrasound/
-│
-├── README.md
-├── BUS-BRA_FinalModel.ipynb
-├── BUS-UCLM_FinalModel.ipynb
-└── figures/
-    └── proposed_model_arch.jpg
-```
-
----
-
-## **How to Run**
-
-### **1. Clone the Repository**
-
-```bash
-git clone https://github.com/sardarsubhajit/ICISS2026-BreastUltrasound.git
-```
-
-### **2. Install Dependencies**
-
-```bash
-pip install torch torchvision numpy matplotlib scikit-learn pandas tqdm
-```
-
-### **3. Open the Notebooks**
-
-Open the repository using Jupyter Notebook, JupyterLab, or Google Colab.
-
-### **4. Configure the Datasets**
-
-Download the BUS-BRA and BUS-UCLM datasets from their respective sources.
-
-Update the dataset paths in the corresponding notebooks according to your local environment.
-
-### **5. Execute the Notebooks**
-
-For BUS-BRA:
-
-```text
-BUS-BRA_FinalModel.ipynb
-```
-
-For BUS-UCLM:
-
-```text
-BUS-UCLM_FinalModel.ipynb
-```
-
-Run the notebook cells sequentially to:
-
-- Load and preprocess the dataset.
-- Initialize the DenseFPN-AHAF model.
-- Train the model.
-- Evaluate classification performance.
-- Generate evaluation results.
 
 ---
 
