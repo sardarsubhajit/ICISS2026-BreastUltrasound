@@ -119,10 +119,6 @@ The proposed framework was developed progressively by integrating attention mech
 | DenseNet with FPN | 10.5M | 88.91 ± 1.68 | 88.85 ± 1.65 | 86.96 ± 1.62 | 87.44 ± 1.76 |
 | **Proposed Architecture** | **10.5M** | **90.40 ± 1.95** | **91.22 ± 1.98** | **91.30 ± 1.23** | **91.30 ± 1.28** |
 
-The results illustrate the progressive development of the proposed framework across both datasets. The final architecture achieves an accuracy of **0.9040** and an F1-score of **0.9122** on BUS-BRA, while achieving an accuracy and F1-score of **0.9130** on BUS-UCLM, with a parameter count of **10.5M**.
-
-Overall, the progressive experiments demonstrate how the integration of feature pyramid learning and hybrid attention contributes to the development of the final architecture, while maintaining a relatively compact model size.
-
 ---
 
 ## **Intended Use**
