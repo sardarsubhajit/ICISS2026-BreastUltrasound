@@ -329,23 +329,3 @@ Run the notebook cells sequentially to:
 This repository is intended for academic research and educational purposes.
 
 The proposed framework is a research implementation and is not intended to replace professional medical diagnosis or clinical decision-making.
-
----
-
-## **Citation**
-
-If you use this implementation in your research, please cite the associated publication:
-
-**Title:** Dual-Attention and Feature Pyramid Network-Enhanced Model for Ultrasound Breast Cancer Classification
-
-**Author:** Britika Khati*, Subhajit Sardar*, Ram Sarkar
-*(\* equal contribution)*
-
-*Complete publication details will be added after publication.*
-
----
-
-## **Acknowledgements**
-
-The authors would like to express their sincere gratitude to **Prof. Ram Sarkar**, Faculty of Department of Computer Science and Engineering, Jadavpur University, for his valuable guidance, encouragement, and support throughout this research work. The authors also acknowledge the **CMATER Laboratory**, Jadavpur University, along with fellow Junior Research Fellows (JRFs), Senior Research Fellows (SRFs), and other research associates for their constructive feedback, insightful discussions, and valuable suggestions that contributed to this work.
-
