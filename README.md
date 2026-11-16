@@ -109,15 +109,15 @@ The proposed framework was developed progressively by integrating attention mech
 
 ### Progressive Development and Comparative Results
 
-| Configuration | Parameters | BUS-BRA Acc. | BUS-BRA F1 | BUS-UCLM Acc. | BUS-UCLM F1 |
+| Configuration | Parameters | BUS-BRA Acc. (%) | BUS-BRA F1 (%) | BUS-UCLM Acc. (%) | BUS-UCLM F1 (%) |
 |---|---:|---:|---:|---:|---:|
-| DenseNet121 | 7.6M | 0.8699 ± 1.84 | 0.8683 ± 1.87 | 0.8696 ± 2.13 | 0.8707 ± 2.05 |
-| DenseNet + SE Attention | 7.7M | 0.8785 ± 1.75 | 0.8798 ± 1.72 | 0.8986 ± 1.85 | 0.8991 ± 1.89 |
-| DenseNet + CBAM Attention | 7.7M | 0.8742 ± 1.82 | 0.8741 ± 1.93 | 0.8986 ± 1.97 | 0.8991 ± 2.12 |
-| DenseNet + Dual-Attention | 8.0M | 0.8785 ± 1.98 | 0.8793 ± 2.05 | 0.8841 ± 1.64 | 0.8840 ± 1.65 |
-| DenseNet + Adaptive Dual Fusion | 8.9M | 0.8849 ± 1.72 | 0.8858 ± 1.94 | 0.8841 ± 1.48 | 0.8879 ± 1.59 |
-| DenseNet + FPN | 10.5M | 0.8891 ± 1.68 | 0.8885 ± 1.65 | 0.8696 ± 1.62 | 0.8744 ± 1.76 |
-| **Proposed Architecture** | **10.5M** | **0.9040 ± 1.95** | **0.9122 ± 1.98** | **0.9130 ± 1.23** | **0.9130 ± 1.28** |
+| DenseNet121 | 7.6M | 86.99 ± 1.84 | 86.83 ± 1.87 | 86.96 ± 2.13 | 87.07 ± 2.05 |
+| DenseNet with SE Attention | 7.7M | 87.85 ± 1.75 | 87.98 ± 1.72 | 89.86 ± 1.85 | 89.91 ± 1.89 |
+| DenseNet with CBAM Attention | 7.7M | 87.42 ± 1.82 | 87.41 ± 1.93 | 89.86 ± 1.97 | 89.91 ± 2.12 |
+| DenseNet with Dual-Attention | 8.0M | 87.85 ± 1.98 | 87.93 ± 2.05 | 88.41 ± 1.64 | 88.40 ± 1.65 |
+| DenseNet with Adaptive Dual Fusion | 8.9M | 88.49 ± 1.72 | 88.58 ± 1.94 | 88.41 ± 1.48 | 88.79 ± 1.59 |
+| DenseNet with FPN | 10.5M | 88.91 ± 1.68 | 88.85 ± 1.65 | 86.96 ± 1.62 | 87.44 ± 1.76 |
+| **Proposed Architecture** | **10.5M** | **90.40 ± 1.95** | **91.22 ± 1.98** | **91.30 ± 1.23** | **91.30 ± 1.28** |
 
 The results illustrate the progressive development of the proposed framework across both datasets. The final architecture achieves an accuracy of **0.9040** and an F1-score of **0.9122** on BUS-BRA, while achieving an accuracy and F1-score of **0.9130** on BUS-UCLM, with a parameter count of **10.5M**.
 
