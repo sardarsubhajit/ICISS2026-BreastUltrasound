@@ -85,15 +85,15 @@ The proposed framework processes breast ultrasound images through the following 
 
 ## Results
 
-| Configuration | Params | BUS-BRA Acc. | BUS-BRA F1 | BUS-UCLM Acc. | BUS-UCLM F1 |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| DenseNet121 | 7.6M | 0.8699 ± 0.0184 | 0.8683 ± 0.0187 | 0.8696 ± 0.0213 | 0.8707 ± 0.0205 |
-| DenseNet + SE Attention | 7.7M | 0.8785 ± 0.0175 | 0.8798 ± 0.0172 | 0.8986 ± 0.0185 | 0.8991 ± 0.0189 |
-| DenseNet + CBAM Attention | 7.7M | 0.8742 ± 0.0182 | 0.8741 ± 0.0193 | 0.8986 ± 0.0197 | 0.8991 ± 0.0212 |
-| DenseNet + Dual-Attention | 8.0M | 0.8785 ± 0.0198 | 0.8793 ± 0.0205 | 0.8841 ± 0.0164 | 0.8840 ± 0.0165 |
-| DenseNet + Adaptive Dual Fusion | 8.9M | 0.8849 ± 0.0172 | 0.8858 ± 0.0194 | 0.8841 ± 0.0148 | 0.8879 ± 0.0159 |
-| DenseNet + FPN | 10.5M | 0.8891 ± 0.0168 | 0.8885 ± 0.0165 | 0.8696 ± 0.0162 | 0.8744 ± 0.0176 |
-| **Proposed Architecture** | **10.5M** | **0.9040 ± 0.0195** | **0.9122 ± 0.0198** | **0.9130 ± 0.0123** | **0.9130 ± 0.0128** |
+| Configuration | BUS-BRA Acc. | BUS-BRA F1 | BUS-UCLM Acc. | BUS-UCLM F1 |
+| :--- | :---: | :---: | :---: | :---: |
+| DenseNet121 | 0.8699 ± 0.0184 | 0.8683 ± 0.0187 | 0.8696 ± 0.0213 | 0.8707 ± 0.0205 |
+| DenseNet with SE Attention | 0.8785 ± 0.0175 | 0.8798 ± 0.0172 | 0.8986 ± 0.0185 | 0.8991 ± 0.0189 |
+| DenseNet with CBAM Attention | 0.8742 ± 0.0182 | 0.8741 ± 0.0193 | 0.8986 ± 0.0197 | 0.8991 ± 0.0212 |
+| DenseNet with Dual-Attention | 0.8785 ± 0.0198 | 0.8793 ± 0.0205 | 0.8841 ± 0.0164 | 0.8840 ± 0.0165 |
+| DenseNet with Adaptive Dual Fusion | 0.8849 ± 0.0172 | 0.8858 ± 0.0194 | 0.8841 ± 0.0148 | 0.8879 ± 0.0159 |
+| DenseNet with FPN | 0.8891 ± 0.0168 | 0.8885 ± 0.0165 | 0.8696 ± 0.0162 | 0.8744 ± 0.0176 |
+| **Proposed Architecture** | **0.9040 ± 0.0195** | **0.9122 ± 0.0198** | **0.9130 ± 0.0123** | **0.9130 ± 0.0128** |
 
 ---
 
